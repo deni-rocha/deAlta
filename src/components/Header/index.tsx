@@ -1,23 +1,15 @@
-import { useContext } from 'react'
-import styled from 'styled-components'
-import ChartsContext from '../../context/chartsContext'
-
-const Div = styled.div`
-  color: white;
-  background: black;
-  width: 100%;
-  height: 400px;
-`
+import { Div, H1, Li, Ul } from './styled'
 
 const Header = () => {
-  const dataCharts = useContext(ChartsContext)
-
-  console.log(dataCharts)
-
   return (
-    <>
-      <Div>oi né</Div>
-    </>
+    <Div>
+      <H1>Meu Deezer</H1>
+      <Ul>
+        <Li>Home</Li>
+        <Li>Charts</Li>
+        <Li>Salvos</Li>
+      </Ul>
+    </Div>
   )
 }
 

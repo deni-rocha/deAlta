@@ -1,11 +1,11 @@
-import Header from './components/Header'
 import GlobalContext from './context'
+import Home from './pages/Home'
 
 function App() {
   return (
     <div className="App">
       <GlobalContext>
-        <Header />
+        <Home />
       </GlobalContext>
     </div>
   )
