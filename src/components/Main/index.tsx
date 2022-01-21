@@ -2,11 +2,16 @@ import { useContext, useEffect } from 'react'
 
 import { getCharts } from '../../services/api'
 import ChartsContext from '../../context/chartsContext'
-import { Div, Li, Ul } from './styled'
+import { Div, DivDegrade } from './styled'
+import ListArtists from '../ChartList/Artists'
+import ListAlbums from '../ChartList/Albums'
+import Trending from '../Trending'
+import Footer from '../Footer'
 
 const Main = () => {
   const { dataCharts, setDataCharts } = useContext(ChartsContext)
-  const chartArtists = dataCharts.artists.data
+  const chartArtists = dataCharts.artists
+  const chartAlbums = dataCharts.albums
   const loading = dataCharts.artists.total === 1 ? true : false
 
   useEffect(() => {
@@ -22,19 +27,11 @@ const Main = () => {
 
   return (
     <Div>
-      <Ul>
-        {chartArtists.map((res) => {
-          return (
-            <Li key={res.id}>
-              <img src={res.picture} alt="artista" />
-              <p>
-                {' '}
-                {res.position} - {res.name}{' '}
-              </p>
-            </Li>
-          )
-        })}
-      </Ul>
+      <Trending chart={chartArtists} />
+      <DivDegrade />
+      <ListArtists chart={chartArtists} chartName="Artistas" />
+      <ListAlbums chart={chartAlbums} chartName="Albuns" />
+      <Footer />
     </Div>
   )
 }

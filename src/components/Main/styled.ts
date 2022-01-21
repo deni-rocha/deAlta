@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 
-
 const Div = styled.div`
   margin-top: 24px;
-  color: white;
-  background: black;
+  font-family: 'Roboto', sans-serif;
 `
-const Ul = styled.ul``
-const Li = styled.li``
+const DivDegrade = styled.div`
+ width: inherit ;
+ height: 100px;
+ background: ${({ theme }) => theme.background} linear-gradient(to bottom,#111 10%,transparent 90%);
+`
 
-export {Div, Ul, Li}
+export {Div, DivDegrade}
