@@ -1,4 +1,4 @@
-interface Artist {
+export interface Artist {
   id: number
   name: string
   link: string
@@ -11,8 +11,7 @@ interface Artist {
   tracklist: string
   type: string
 }
-
-interface Album {
+export interface Album {
   id: number
   title: string
   cover: string
@@ -24,8 +23,7 @@ interface Album {
   tracklist: string
   type: string
 }
-
-interface Datum {
+export interface Datum {
   id: number
   title: string
   title_short: string
@@ -44,12 +42,11 @@ interface Datum {
   type: string
 }
 
-interface Tracks {
+export interface Tracks {
   data: Datum[]
   total: number
 }
-
-interface Artist2 {
+export interface Artist2 {
   id: number
   name: string
   link: string
@@ -62,8 +59,7 @@ interface Artist2 {
   tracklist: string
   type: string
 }
-
-interface Datum2 {
+export interface Datum2 {
   id: number
   title: string
   link: string
@@ -81,12 +77,11 @@ interface Datum2 {
   type: string
 }
 
-interface Albums {
+export interface Albums {
   data: Datum2[]
   total: number
 }
-
-interface Datum3 {
+export interface Datum3 {
   id: number
   name: string
   link: string
@@ -101,19 +96,17 @@ interface Datum3 {
   type: string
 }
 
-interface Artists {
+export interface Artists {
   data: Datum3[]
   total: number
 }
-
-interface User {
+export interface User {
   id: number
   name: string
   tracklist: string
   type: string
 }
-
-interface Datum4 {
+export interface Datum4 {
   id: number
   title: string
   public: boolean
@@ -133,12 +126,11 @@ interface Datum4 {
   type: string
 }
 
-interface Playlists {
+export interface Playlists {
   data: Datum4[]
   total: number
 }
-
-interface Datum5 {
+export interface Datum5 {
   id: number
   title: string
   description: string
@@ -154,7 +146,7 @@ interface Datum5 {
   type: string
 }
 
-interface Podcasts {
+export interface Podcasts {
   data: Datum5[]
   total: number
 }
