@@ -96,6 +96,9 @@ export interface Datum3 {
   type: string
 }
 
+export interface TrendingArtist {
+  data: Datum3
+}
 export interface Artists {
   data: Datum3[]
   total: number
@@ -155,6 +158,7 @@ export interface ICharts {
   tracks: Tracks
   albums: Albums
   artists: Artists
+  trendingArtist: TrendingArtist
   playlists: Playlists
   podcasts: Podcasts
 }
