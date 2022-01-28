@@ -147,7 +147,6 @@ const INITIAL_VALUE = {
     "total": 1
   },
   "trendingArtist": {
-    data: {
       "id": 61474832,
       "name": "Os Barões Da Pisadinha",
       "link": "http://www.deezer.com/artist/61474832",
@@ -160,7 +159,6 @@ const INITIAL_VALUE = {
       "tracklist": "http://api.deezer.com/artist/61474832/top?limit=50",
       "position": 1,
       "type": "artist"
-    }
   }
 }
 

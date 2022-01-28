@@ -96,8 +96,8 @@ export interface Datum3 {
   type: string
 }
 
-export interface TrendingArtist {
-  data: Datum3
+export interface TrendingArtist extends Datum3{
+   
 }
 export interface Artists {
   data: Datum3[]

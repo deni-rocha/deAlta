@@ -10,6 +10,7 @@ import Footer from '../Footer'
 
 const Main = () => {
   const { dataCharts, setDataCharts } = useContext(ChartsContext)
+  const trendingArtist = dataCharts.trendingArtist
   const chartArtists = dataCharts.artists
   const chartAlbums = dataCharts.albums
   const loading = dataCharts.artists.total === 1 ? true : false
@@ -27,7 +28,7 @@ const Main = () => {
 
   return (
     <Div>
-      <Trending chart={chartArtists} />
+      <Trending artist={trendingArtist} />
       <DivDegrade />
       <ListArtists chart={chartArtists} chartName="Artistas" />
       <ListAlbums chart={chartAlbums} chartName="Albuns" />
