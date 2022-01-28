@@ -1,9 +1,9 @@
 import { Div } from './styled'
-
+import ShowMore from '../../assets/ShowMore'
 const Footer = () => {
   return (
     <Div>
-      <a href="/"> mostrar tudo </a>
+      <ShowMore className='show-more' width={'50px'} height={'50px'}/>
     </Div>
   )
 }

@@ -8,9 +8,10 @@ font-weight: 400;
 display: flex;
 justify-content: center;
 align-items: center;
-  a{
-    text-decoration: none;
+
+  .show-more{
+    fill: ${({ theme }) => theme.titles}
   }
 `
 
-export { Div}
+export { Div }

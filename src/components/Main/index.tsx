@@ -16,7 +16,7 @@ const Main = () => {
   const loading = dataCharts.artists.total === 1 ? true : false
 
   useEffect(() => {
-    const fetch = async () => {
+    const fetch = async () => { 
       const res = await getCharts()
       setDataCharts(res)
     }
