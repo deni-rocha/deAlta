@@ -42,11 +42,11 @@ const ListPlaylists = ({ chart, chartName }: IList) => {
   return (
     <SectionChart>
       <H1ChartName> {chartName} </H1ChartName>
-      <ArrowRight className='arrow-right arrow' width={'50px'} height={'50px'}/>
-      <ArrowLeft className='arrow-left arrow' width={'50px'} height={'50px'} />
+      <ArrowRight className='arrow-right arrow' width={'50px'} height={'50px'} onClick={handleRightArrow}/>
+      <ArrowLeft className='arrow-left arrow' width={'50px'} height={'50px'} onClick={handleLeftArrow} />
       <DivChartListArea>
         <DivChartList style={{
-          marginLeft: -400,
+          marginLeft: scrollX,
           width: chart.data.length * 150,
         }}>
           {chart.data.map((res) => {

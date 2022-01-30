@@ -10,4 +10,6 @@ const DivDegrade = styled.div`
  background: ${({ theme }) => theme.background} linear-gradient(to bottom,#111 10%,transparent 90%);
 `
 
+
+
 export {Div, DivDegrade}

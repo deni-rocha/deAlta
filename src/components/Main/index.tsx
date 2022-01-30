@@ -1,30 +1,17 @@
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 
-import { getCharts } from '../../services/api'
 import ChartsContext from '../../context/chartsContext'
-import { Div, DivDegrade } from './styled'
+import { Div, DivDegrade} from './styled'
 import ListArtists from '../ChartList/Artists'
 import ListAlbums from '../ChartList/Albums'
 import Trending from '../Trending'
 import Footer from '../Footer'
 
 const Main = () => {
-  const { dataCharts, setDataCharts } = useContext(ChartsContext)
+  const { dataCharts } = useContext(ChartsContext)
   const trendingArtist = dataCharts.trendingArtist
   const chartArtists = dataCharts.artists
   const chartAlbums = dataCharts.albums
-  const loading = dataCharts.artists.total === 1 ? true : false
-
-  useEffect(() => {
-    const fetch = async () => { 
-      const res = await getCharts()
-      setDataCharts(res)
-    }
-
-    fetch()
-  }, [setDataCharts])
-
-  if (loading) return <h4>carregando...</h4>
 
   return (
     <Div>
