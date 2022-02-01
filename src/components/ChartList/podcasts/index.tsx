@@ -1,4 +1,8 @@
-import { Artists } from '../../../types/ICharts'
+import { useState } from 'react'
+import ArrowLeft from '../../../assets/ArrowLeft'
+import ArrowRight from '../../../assets/ArrowRight'
+import { Podcasts } from '../../../types/ICharts'
+
 import {
   DivChartItem,
   DivChartList,
@@ -7,14 +11,12 @@ import {
   SectionChart,
 } from '../styled'
 
-import ArrowRight from '../../../assets/ArrowRight'
-import ArrowLeft from '../../../assets/ArrowLeft'
-import { useState } from 'react'
 type IList = {
-  chart: Artists
+  chart: Podcasts
   chartName: string
 }
-const ListArtists = ({ chart, chartName }: IList) => {
+const ListPodcasts = ({ chart, chartName }: IList) => {
+
   const [scrollX, setScrollX] = useState(0)
   
   function handleLeftArrow () {
@@ -49,10 +51,11 @@ const ListArtists = ({ chart, chartName }: IList) => {
         }}>
           {chart.data.map((res) => {
             return (
-              <DivChartItem key={res.id} onClick={() => console.log(res.tracklist)}>
+              <DivChartItem key={res.id}>
                 <img src={res.picture} alt="artista" />
                 <p>
-                  {res.position} - {res.name}{' '}
+                  {' '}
+                 {res.title}{' '}
                 </p>
               </DivChartItem>
             )
@@ -63,4 +66,4 @@ const ListArtists = ({ chart, chartName }: IList) => {
   )
 }
 
-export default ListArtists
+export default ListPodcasts

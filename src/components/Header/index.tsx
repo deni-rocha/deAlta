@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Lamp from '../../assets/Lamp'
 import { Button, Div, DivTittle, Li, Ul } from './styled'
 
@@ -17,9 +18,9 @@ const Header = ({ theme }: IHeader) => {
         <p className="third style">TA</p>
       </DivTittle>
       <Ul>
-        <Li>Home</Li>
-        <Li>Charts</Li>
-        <Li>Salvos</Li>
+        <Li> <Link to="/"> Início </Link> </Li>
+        <Li><Link to="/charts"> Charts</Link></Li>
+        <Li> <Link to="/saves"> Salvos</Link></Li>
       </Ul>
       <Button onClick={() => theme.setIsDarkTheme(!theme.isDarkTheme)}>
         <Lamp />

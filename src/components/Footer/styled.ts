@@ -9,6 +9,15 @@ display: flex;
 justify-content: center;
 align-items: center;
 
+  .link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    p {
+      color: ${({ theme }) => theme.titles};
+    }
+  }
   .show-more{
     fill: ${({ theme }) => theme.titles}
   }

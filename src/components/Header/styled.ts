@@ -38,7 +38,12 @@ const Ul = styled.ul`
   display: flex;
   align-items: center;
 `
-const Li = styled.li``
+const Li = styled.li`
+  a {
+    color: ${({ theme }) => theme.text};
+    text-decoration: none;
+  }
+`
 
 const Button = styled.button`
   border: none;

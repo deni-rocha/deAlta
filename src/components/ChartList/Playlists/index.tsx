@@ -55,7 +55,7 @@ const ListPlaylists = ({ chart, chartName }: IList) => {
                 <img src={res.picture} alt="artista" />
                 <p>
                   {' '}
-                  {res.creation_date} - {res.title}{' '}
+                  {res.title}{' '}
                 </p>
               </DivChartItem>
             )

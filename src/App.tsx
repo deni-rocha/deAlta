@@ -1,12 +1,13 @@
 import { useContext, useEffect, useState } from 'react'
+
 import { ThemeProvider } from 'styled-components'
 import Header from './components/Header'
 import { DivLoad } from './AppStyled'
 import ChartsContext from './context/chartsContext'
-import Home from './pages/Home'
 import { darkTheme, lightTheme } from './Themes'
 import LoadGif from './assets/gifs/Load'
 import { getCharts } from './services/api'
+import Rotas from './routes'
 
 
 function App() {
@@ -32,7 +33,7 @@ function App() {
         <Header theme={{ isDarkTheme, setIsDarkTheme }} />
         {loading ? <DivLoad>
           <LoadGif className='load' />
-        </DivLoad> : <Home />}
+        </DivLoad> : <Rotas />}
       </ThemeProvider>
     </div>
   )
