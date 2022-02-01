@@ -21,10 +21,10 @@ const Charts = () => {
     <BaseTemplate>
       <Div>
         <ListArtists chart={chartArtists} chartName="Artistas" />
+        <ListTracks chart={chartTracks} chartName="Músicas"  />
         <ListAlbums chart={chartAlbums} chartName="Albuns" />
         <ListPlaylists chart={chartPlaylists} chartName="Playlists" />
         <ListPodcasts chart={chartPodcasts} chartName="Podcasts"/>
-        <ListTracks chart={chartTracks} chartName="Músicas"  />
       </Div>
     </BaseTemplate>
   )

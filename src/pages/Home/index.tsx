@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import ListAlbums from '../../components/ChartList/Albums'
 import ListArtists from '../../components/ChartList/Artists'
+import ListTracks from '../../components/ChartList/Tracks'
 import Footer from '../../components/Footer'
 import Trending from '../../components/Trending'
 import ChartsContext from '../../context/chartsContext'
@@ -11,8 +12,8 @@ const Home = () => {
   
   const { dataCharts } = useContext(ChartsContext)
   const trendingArtist = dataCharts.trendingArtist
+  const chartTracks = dataCharts.tracks
   const chartArtists = dataCharts.artists
-  const chartAlbums = dataCharts.albums
 
   return (
     <BaseTemplate>
@@ -20,7 +21,7 @@ const Home = () => {
       <Trending artist={trendingArtist} />
       <DivDegrade />
       <ListArtists chart={chartArtists} chartName="Artistas" />
-      <ListAlbums chart={chartAlbums} chartName="Albuns" />
+      <ListTracks chart={chartTracks} chartName="Músicas" />
       <Footer />
     </Div>
     </BaseTemplate>

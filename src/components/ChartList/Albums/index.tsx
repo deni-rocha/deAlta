@@ -51,7 +51,7 @@ const ListAlbums = ({ chart, chartName }: IList) => {
         }}>
           {chart.data.map((res) => {
             return (
-              <DivChartItem key={res.id}>
+              <DivChartItem key={res.id} >
                 <img src={res.cover} alt="artista" />
                 <p>
                   {' '}

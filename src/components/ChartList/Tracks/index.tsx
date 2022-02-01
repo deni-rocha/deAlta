@@ -51,15 +51,13 @@ const ListTracks = ({ chart, chartName }: IList) => {
         }}>
           {chart.data.map((res) => {
             return (
-              <DivChartItem key={res.id}>
+              <DivChartItem key={res.id} onClick={() => console.log(res)}>
+                <img src={res.artist.picture_medium} alt="artista" />
                 <p>
                   {' '}
-                  {res.title}{' '}
+                  {res.title_short}{' '}
                 </p>
 
-                <audio>
-                    <source src={res.preview}> </source>
-                </audio>
               </DivChartItem>
             )
           })}
