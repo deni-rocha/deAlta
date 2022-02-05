@@ -16,6 +16,15 @@ function App() {
 
   const loading = dataCharts.artists.total === 1 ? true : false
 
+  useEffect(()=>{
+    let existsLocalTheme: string | undefined = localStorage.theme
+
+    if(existsLocalTheme){
+      let themeParsed: boolean = JSON.parse(localStorage.theme)
+      setIsDarkTheme(themeParsed)
+    }
+
+  },[])
 
   useEffect(() => {
     const fetch = async () => {

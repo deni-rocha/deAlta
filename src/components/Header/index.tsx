@@ -10,6 +10,14 @@ type IHeader = {
 }
 
 const Header = ({ theme }: IHeader) => {
+
+  function handleTheme () {
+    let changeTheme = !theme.isDarkTheme
+    theme.setIsDarkTheme(changeTheme)
+
+    let themeParsed: string = JSON.stringify(changeTheme)
+    localStorage.setItem('theme', themeParsed)
+  }
   return (
     <Div>
       <DivTittle>
@@ -22,7 +30,7 @@ const Header = ({ theme }: IHeader) => {
         <Li><Link to="/charts"> Charts</Link></Li>
         <Li> <Link to="/saves"> Salvos</Link></Li>
       </Ul>
-      <Button onClick={() => theme.setIsDarkTheme(!theme.isDarkTheme)}>
+      <Button onClick={handleTheme}>
         <Lamp />
       </Button>
     </Div>
