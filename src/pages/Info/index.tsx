@@ -12,6 +12,7 @@ const Info = () => {
     <Div>
       id: {id}
     </Div>
+
     </BaseTemplate>
   )
 }
