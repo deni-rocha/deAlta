@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import ArrowLeft from '../../../assets/ArrowLeft'
 import ArrowRight from '../../../assets/ArrowRight'
-import { Playlists, Tracks } from '../../../types/ICharts'
+import { Tracks } from '../../../types/ICharts'
 
 import {
   DivChartItem,

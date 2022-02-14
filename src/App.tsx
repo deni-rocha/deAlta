@@ -33,7 +33,7 @@ function App() {
     }
 
     fetch()
-  }, [])
+  }, [setDataCharts])
 
 
   return (

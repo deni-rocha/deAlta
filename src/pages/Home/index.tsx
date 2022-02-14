@@ -1,5 +1,4 @@
 import { useContext } from 'react'
-import ListAlbums from '../../components/ChartList/Albums'
 import ListArtists from '../../components/ChartList/Artists'
 import ListTracks from '../../components/ChartList/Tracks'
 import Footer from '../../components/Footer'

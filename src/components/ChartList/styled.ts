@@ -38,13 +38,17 @@ display: inline-block;
 width: 150px;
 cursor: pointer;
 
+ a {
+   text-decoration: none;
+   color: inherit;
+ }
  img {
    border-radius: 14px;
    width: 100%;
    transform: scale(0.9);
    transition: all ease 0.2s;
  }
- img:hover {
+ img:hover { 
    transform: scale(1);
  }
 
