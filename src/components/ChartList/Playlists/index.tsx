@@ -20,24 +20,45 @@ const ListPlaylists = ({ chart, chartName }: IList) => {
   const [scrollX, setScrollX] = useState(0)
   
   function handleLeftArrow () {
-      let x = scrollX + Math.round(window.innerWidth / 2)
-      if(x > 0) {
-        x = 0
+    let containerCards
+
+    if(window.innerWidth > 600) {
+      containerCards =  scrollX + Math.round( ((70/100) * window.innerWidth) / 2)
+    }
+    else{
+      containerCards = scrollX + Math.round(window.innerWidth / 2)
+    }
+
+      if(containerCards > 0) {
+        containerCards = 0
       }
 
-      setScrollX(x)
+      setScrollX(containerCards)
   }
 
   function handleRightArrow (){
-    let x = scrollX - Math.round(window.innerWidth / 2)
+    let containerCards
+    let inheritContainerCards
     let listW = chart.data.length * 150;
 
-    if((window.innerWidth - listW) > x){
-      x = (window.innerWidth - listW) - 60
+    if(window.innerWidth > 600) {
+      containerCards =  scrollX - Math.round( ((70/100) * window.innerWidth) / 2)
+
+     inheritContainerCards = ((70/100) * window.innerWidth) - listW
+    }
+    else{
+      containerCards = scrollX - Math.round(window.innerWidth / 2)
+      inheritContainerCards = window.innerWidth - listW
+    }
+
+
+
+    if( inheritContainerCards > containerCards){
+      containerCards = inheritContainerCards - 60
     }
    
-    setScrollX(x)
-  } 
+    setScrollX(containerCards)
+  }  
   
   return (
     <SectionChart>

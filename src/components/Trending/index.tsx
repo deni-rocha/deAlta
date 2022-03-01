@@ -11,9 +11,7 @@ function Trending({ artist }: ITrending) {
     <Div>
       <section
         style={{
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundImage: `url(${artist.picture_medium})`,
+          backgroundImage: `url(${artist.picture_xl})`,
         }}
       >
         <DegradeVertical>
