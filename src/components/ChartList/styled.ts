@@ -15,9 +15,23 @@ const SectionChart = styled.section`
   }
   .arrow-left{
     left: 0;
+    @media screen and (min-width: 600px) {
+        left: auto;
+        right: 80%;
+     }
+    @media screen and (min-width: 950px) {
+        right: 82%;
+     }
   } 
   .arrow-right {
     right: 0;
+    @media screen and (min-width: 600px) {
+      right: auto;
+      left: 80%;
+     }
+    @media screen and (min-width: 950px) {
+      left: 82%;
+     }
   }
 `
 const H1ChartName = styled.h2`
