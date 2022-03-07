@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { api } from '../../services/api'
-import BaseTemplate from '../../templates/BaseTemplate'
-import { IDetails } from '../../types/IDetails'
+import { api } from '../../../services/api'
+import { IDetails } from '../../../types/IDetailsArtist'
 import { Div } from './styled'
 
-const Details = () => {
+const DetailsTrack = () => {
   let { id } = useParams()
   const [data, setData] = useState<IDetails[] | null>(null)
 
@@ -22,7 +21,6 @@ const Details = () => {
 
   if (data === null) return <p> carregando... </p>
   return (
-    <BaseTemplate>
       <Div>
         <ul>
           {data?.map((res, index) => (
@@ -33,8 +31,7 @@ const Details = () => {
           ))}
         </ul>
       </Div>
-    </BaseTemplate>
   )
 }
 
-export default Details
+export default DetailsTrack
