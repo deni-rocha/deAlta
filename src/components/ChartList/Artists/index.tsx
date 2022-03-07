@@ -72,7 +72,7 @@ const ListArtists = ({ chart, chartName }: IList) => {
           {chart.data.map((res) => {
             return (
               <DivChartItem key={res.id} onClick={() => console.log(res.tracklist)}>
-                <Link to={`/details/${res.id}`}>
+                <Link to={`/detailsArtist/${res.id}`}>
                   <img src={res.picture} alt="artista" />
                   <p>
                     {res.position} - {res.name}{' '}

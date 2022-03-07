@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import ArrowLeft from '../../../assets/ArrowLeft'
 import ArrowRight from '../../../assets/ArrowRight'
 import { Tracks } from '../../../types/ICharts'
@@ -73,11 +74,13 @@ const ListTracks = ({ chart, chartName }: IList) => {
           {chart.data.map((res) => {
             return (
               <DivChartItem key={res.id} onClick={() => console.log(res)}>
+                <Link to={`/detailsTrack/${res.id}`}>               
                 <img src={res.artist.picture_medium} alt="artista" />
                 <p>
                   {' '}
                   {res.title_short}{' '}
                 </p>
+                </Link>
 
               </DivChartItem>
             )
