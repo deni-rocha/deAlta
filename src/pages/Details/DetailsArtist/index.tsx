@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { api } from '../../../services/api'
-import { IDetails } from '../../../types/IDetailsArtist'
+import { IDetails } from '../../../types/details/IDetailsArtist'
 import { Div } from './styled'
 
 const DetailsArtist = () => {

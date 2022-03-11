@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ArrowLeft from '../../../assets/ArrowLeft'
 import ArrowRight from '../../../assets/ArrowRight'
-import { Tracks } from '../../../types/ICharts'
+import { Tracks } from '../../../types/charts/ICharts'
 
 import {
   DivChartItem,

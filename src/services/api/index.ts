@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { ICharts } from '../../types/ICharts'
+import { ICharts } from '../../types/charts/ICharts'
 
 let BASE_URL = () => {
   if(process.env.NODE_ENV === 'development') {

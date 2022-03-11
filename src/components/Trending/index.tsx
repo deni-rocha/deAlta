@@ -1,4 +1,4 @@
-import { TrendingArtist } from '../../types/ICharts'
+import { TrendingArtist } from '../../types/charts/ICharts'
 import { DegradeVertical, Div } from './styled'
 
 type ITrending = {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { api } from '../../../services/api'
-import { IDetails } from '../../../types/IDetailsArtist'
+import { IDetails } from '../../../types/details/IDetailsArtist'
 import { Div } from './styled'
 
 const DetailsTrack = () => {
@@ -10,7 +10,7 @@ const DetailsTrack = () => {
 
   useEffect(() => {
     const fetch = async () => {
-      let res = await api.get(`artist/${id}`)
+      let res = await api.get(`track/${id}`)
       const resData: IDetails[] = res.data
       console.log('res da api', resData)
       setData(resData)

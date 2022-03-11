@@ -1,4 +1,4 @@
-import { Artists } from '../../../types/ICharts'
+import { Artists } from '../../../types/charts/ICharts'
 import {
   DivChartItem,
   DivChartList,

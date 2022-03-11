@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react'
-import { ICharts } from '../../types/ICharts'
+import { ICharts } from '../../types/charts/ICharts'
 import { INITIAL_VALUE } from './initialValue'
 
 type ChartsContextProviderProps = {
