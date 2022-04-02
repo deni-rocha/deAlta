@@ -1,4 +1,6 @@
-export interface IDetails {
+import { Contributor } from "./IDetailsTrack"
+
+export interface IDetailsArtist {
     id: number
     readable: boolean
     title: string
@@ -11,6 +13,7 @@ export interface IDetails {
     explicit_content_lyrics: number
     explicit_content_cover: number
     preview: string
+    contributors: Contributor[]
     md5_image: string
     artist: Artist
     album: Album
