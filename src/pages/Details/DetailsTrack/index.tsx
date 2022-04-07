@@ -1,10 +1,9 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { api } from '../../../services/api'
-import { GridDiv } from '../../../templates/BaseTemplate/styled'
+import BaseTemplate from '../../../templates/BaseTemplate'
 import { IDetailsTrack } from '../../../types/details/IDetailsTrack'
-import { Title } from '../detailsStyled'
-import { Div } from './styled'
+import { CardTrack } from '../detailsStyled'
 
 const DetailsTrack = () => {
   let { id } = useParams()
@@ -23,14 +22,18 @@ const DetailsTrack = () => {
 
   if (data === null) return <p> carregando... </p>
   return (
-    <GridDiv>
-      <Div>
-        
-        <Title>{data.title_short}</Title>
-        <h2>letra explícita: {data.explicit_lyrics? 'sim' : 'não'}</h2>
-          <audio src={data.preview} controls></audio>
-      </Div>
-    </GridDiv>
+    <BaseTemplate>
+      <CardTrack>
+        <div className="card-li--div">
+          <p>{data.disk_number}- </p>
+          <h1 className="card-li--div---title"> {data.title_short} </h1>
+        </div>
+        <audio src={data.preview} controls></audio>
+        <a href={data.link} className="card-li--div---link">
+          ouvir completa
+        </a>
+      </CardTrack>
+    </BaseTemplate>
   )
 }
 
