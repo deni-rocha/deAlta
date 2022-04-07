@@ -9,6 +9,10 @@ const Div = styled.div`
   justify-content: space-between;
   align-items: center;
   font-family: 'Roboto Condensed', sans-serif;
+
+  .link {
+    text-decoration: none;
+  }
 `
 
 const DivTittle = styled.div`
@@ -16,18 +20,18 @@ const DivTittle = styled.div`
   display: flex;
   font-weight: 700;
   font-size: 16px;
-  .style{
+  .style {
     text-shadow: 1px 1px 1px #009688;
   }
-  .first{
-    color: #F55376;
+  .first {
+    color: #f55376;
     margin-right: 4px;
   }
-  .second{
-    color: #F5BC00;
+  .second {
+    color: #f5bc00;
   }
-  .third{
-    color: #00B569;
+  .third {
+    color: #00b569;
   }
 `
 

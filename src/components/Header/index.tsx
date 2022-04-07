@@ -10,8 +10,7 @@ type IHeader = {
 }
 
 const Header = ({ theme }: IHeader) => {
-
-  function handleTheme () {
+  function handleTheme() {
     let changeTheme = !theme.isDarkTheme
     theme.setIsDarkTheme(changeTheme)
 
@@ -20,15 +19,23 @@ const Header = ({ theme }: IHeader) => {
   }
   return (
     <Div>
-      <DivTittle>
-        <p className="first style">De</p>
-        <p className="second style">AL</p>
-        <p className="third style">TA</p>
-      </DivTittle>
+      <Link to={'/'} className="link">
+        <DivTittle>
+          <p className="first style">De</p>
+          <p className="second style">AL</p>
+          <p className="third style">TA</p>
+        </DivTittle>
+      </Link>
       <Ul>
-        <Li> <Link to="/"> Início </Link> </Li>
-        <Li><Link to="/charts"> Charts</Link></Li>
-        <Li> <Link to="/saves"> Salvos</Link></Li>
+        <Li>
+          <Link to="/"> Início </Link>
+        </Li>
+        <Li>
+          <Link to="/charts"> Charts</Link>
+        </Li>
+        <Li>
+          <Link to="/saves"> Salvos</Link>
+        </Li>
       </Ul>
       <Button onClick={handleTheme}>
         <Lamp />
