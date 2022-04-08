@@ -15,17 +15,14 @@ const DivDetailsAlbum = styled.div`
     }
   }
   .section-info {
-    margin-top: 28px;
-    .tittle {
+    margin: 28px 0;
+    &--tittle {
       font-size: 24px;
+      margin: 12px 0;
     }
 
-    &--genero {
-      margin-top: 18px;
-      display: flex;
-      &---name {
-        padding-left: 8px;
-      }
+    .p-info {
+      margin-top: 8px;
     }
   }
 `
