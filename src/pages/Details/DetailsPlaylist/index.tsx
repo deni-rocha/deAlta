@@ -3,34 +3,33 @@ import { useParams } from 'react-router-dom'
 import CardTrack from '../../../components/CardTrack'
 import { api } from '../../../services/api'
 import BaseTemplate from '../../../templates/BaseTemplate'
-import { IDetailsArtist } from '../../../types/details/IDetailsArtist'
+import { IDetailsPlaylist } from '../../../types/details/IDetailsPlaylist'
 import { Div } from '../detailsStyled'
-import { DivDetailsArtist } from './styled'
+import { DivDetailsPlaylist } from './styled'
 
-const DetailsArtist = () => {
-  let { id, name } = useParams()
-  const [data, setData] = useState<IDetailsArtist[] | null>(null)
+const DetailsPlaylist = () => {
+  let { id } = useParams()
+  const [data, setData] = useState<IDetailsPlaylist | null>(null)
 
   useEffect(() => {
     const fetch = async () => {
-      let res = await api.get(`artist/${id}`)
-      const resData: IDetailsArtist[] = res.data
+      let res = await api.get(`playlist/${id}`)
+      const resData: IDetailsPlaylist = res.data
       console.log('res da api', resData)
       setData(resData)
     }
 
     fetch()
-  }, [id, name])
+  }, [id])
 
   if (data === null) return <p> carregando... </p>
   return (
     <BaseTemplate>
       <Div>
-        <DivDetailsArtist>
-          <h1 className="nome-artista"> {name} </h1>
-          <h3 className="sub-title">(Músicas que estão em alta)</h3>
+        <DivDetailsPlaylist>
+          <h1 className="nome-artista"> {data.title} </h1>
           <ul className="ul-tracks">
-            {data?.map((res, index) => (
+            {data.tracks.data.map((res, index) => (
               <li key={index}>
                 <CardTrack
                   index={++index}
@@ -41,10 +40,10 @@ const DetailsArtist = () => {
               </li>
             ))}
           </ul>
-        </DivDetailsArtist>
+        </DivDetailsPlaylist>
       </Div>
     </BaseTemplate>
   )
 }
 
-export default DetailsArtist
+export default DetailsPlaylist

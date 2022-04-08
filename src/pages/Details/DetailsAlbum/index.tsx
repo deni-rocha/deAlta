@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import CardTrack from '../../../components/CardTrack'
 import { api } from '../../../services/api'
 import BaseTemplate from '../../../templates/BaseTemplate'
 import { IDetailsAlbum } from '../../../types/details/IDetailsAlbum'
-import { CardTrack, Div } from '../detailsStyled'
+import { Div } from '../detailsStyled'
 import { DivDetailsAlbum } from './style'
 
 const DetailsArtist = () => {
@@ -50,15 +51,12 @@ const DetailsArtist = () => {
             </p>
           </section>
           {data.tracks.data.map((obj, index) => (
-            <CardTrack>
-              <div className="card-li--div">
-                <h1 className="card-li--div---title"> {obj.title_short} </h1>
-              </div>
-              <audio src={obj.preview} controls></audio>
-              <a href={data.link} className="card-li--div---link">
-                ouvir completa
-              </a>
-            </CardTrack>
+            <CardTrack
+              index={++index}
+              title_short={obj.title_short}
+              preview={obj.preview}
+              link={data.link}
+            />
           ))}
         </DivDetailsAlbum>
       </Div>

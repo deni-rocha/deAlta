@@ -6,6 +6,7 @@ import Home from '../pages/Home'
 import DetailsArtist from '../pages/Details/DetailsArtist'
 import DetailsTrack from '../pages/Details/DetailsTrack'
 import DetailsAlbum from '../pages/Details/DetailsAlbum'
+import DetailsPlaylist from '../pages/Details/DetailsPlaylist'
 
 export default function Rotas() {
   return (
@@ -16,6 +17,7 @@ export default function Rotas() {
       <Route path="/detailsArtist/:id/:name" element={<DetailsArtist />} />
       <Route path="/detailsTrack/:id" element={<DetailsTrack />} />
       <Route path="/detailsAlbum/:id" element={<DetailsAlbum />} />
+      <Route path="/detailsPlaylist/:id" element={<DetailsPlaylist />} />
     </Routes>
   )
 }
