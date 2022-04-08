@@ -7,6 +7,7 @@ import DetailsArtist from '../pages/Details/DetailsArtist'
 import DetailsTrack from '../pages/Details/DetailsTrack'
 import DetailsAlbum from '../pages/Details/DetailsAlbum'
 import DetailsPlaylist from '../pages/Details/DetailsPlaylist'
+import DetailsPodcast from '../pages/Details/DetailsPodcast'
 
 export default function Rotas() {
   return (
@@ -18,6 +19,7 @@ export default function Rotas() {
       <Route path="/detailsTrack/:id" element={<DetailsTrack />} />
       <Route path="/detailsAlbum/:id" element={<DetailsAlbum />} />
       <Route path="/detailsPlaylist/:id" element={<DetailsPlaylist />} />
+      <Route path="/detailsPodcast/:id" element={<DetailsPodcast />} />
     </Routes>
   )
 }

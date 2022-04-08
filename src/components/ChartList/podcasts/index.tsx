@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import ArrowLeft from '../../../assets/ArrowLeft'
 import ArrowRight from '../../../assets/ArrowRight'
 import { Podcasts } from '../../../types/charts/ICharts'
@@ -82,8 +83,10 @@ const ListPodcasts = ({ chart, chartName }: IList) => {
           {chart.data.map((res) => {
             return (
               <DivChartItem key={res.id} onClick={() => console.log(res.id)}>
-                <img src={res.picture} alt="artista" />
-                <p> {res.title} </p>
+                <Link to={`/detailsPodcast/${res.id}`}>
+                  <img src={res.picture} alt="artista" />
+                  <p> {res.title} </p>
+                </Link>
               </DivChartItem>
             )
           })}
