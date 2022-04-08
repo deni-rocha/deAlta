@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 const DivDetailsAlbum = styled.div`
-  margin-top: 28px;
   display: flex;
   flex-direction: column;
   align-items: center;

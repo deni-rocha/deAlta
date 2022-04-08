@@ -6,7 +6,6 @@ const DivDetailsArtist = styled.div`
   align-items: center;
   .nome-artista {
     font-size: 20px;
-    margin-top: 24px;
   }
   .sub-title {
     margin: 14px 0 20px;

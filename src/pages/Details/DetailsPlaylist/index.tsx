@@ -4,6 +4,7 @@ import CardTrack from '../../../components/CardTrack'
 import { api } from '../../../services/api'
 import BaseTemplate from '../../../templates/BaseTemplate'
 import { IDetailsPlaylist } from '../../../types/details/IDetailsPlaylist'
+import getDateYear from '../../../utils/getYear'
 import { Div } from '../detailsStyled'
 import { DivDetailsPlaylist } from './styled'
 
@@ -27,7 +28,14 @@ const DetailsPlaylist = () => {
     <BaseTemplate>
       <Div>
         <DivDetailsPlaylist>
-          <h1 className="nome-artista"> {data.title} </h1>
+          <h1 className="nome-playlist"> {data.title}</h1>
+          <p className="info-created info">
+            {`criação: ${getDateYear(data.creation_date)} - 
+            ${data.creator.name.substring(0, 5)}`}
+          </p>
+          <p className="info-fans info">{`fans: ${new Intl.NumberFormat(
+            'br-IN'
+          ).format(data.fans)}`}</p>
           <ul className="ul-tracks">
             {data.tracks.data.map((res, index) => (
               <li key={index}>

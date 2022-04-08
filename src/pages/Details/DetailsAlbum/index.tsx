@@ -4,6 +4,7 @@ import CardTrack from '../../../components/CardTrack'
 import { api } from '../../../services/api'
 import BaseTemplate from '../../../templates/BaseTemplate'
 import { IDetailsAlbum } from '../../../types/details/IDetailsAlbum'
+import getDateYear from '../../../utils/getYear'
 import { Div } from '../detailsStyled'
 import { DivDetailsAlbum } from './style'
 
@@ -22,13 +23,6 @@ const DetailsArtist = () => {
     fetch()
   }, [id])
 
-  function getYear(str: string) {
-    const date = new Date(str)
-    const year = date.getFullYear()
-
-    return year
-  }
-
   if (data === null) return <p> carregando... </p>
   return (
     <BaseTemplate>
@@ -39,7 +33,7 @@ const DetailsArtist = () => {
           </div>
           <section className="section-info">
             <h1 className="section-info--tittle">{data.title}</h1>
-            <p className="p-info">ano: {getYear(data.release_date)}</p>
+            <p className="p-info">ano: {getDateYear(data.release_date)}</p>
             <p className="section-info--genero p-info">
               gênero:
               {data.genres.data[0]

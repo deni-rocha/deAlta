@@ -4,6 +4,7 @@ import CardTrack from '../../../components/CardTrack'
 import { api } from '../../../services/api'
 import BaseTemplate from '../../../templates/BaseTemplate'
 import { IDetailsTrack } from '../../../types/details/IDetailsTrack'
+import { Div } from '../detailsStyled'
 import { DivDetailsTrack } from './styled'
 
 const DetailsTrack = () => {
@@ -24,14 +25,16 @@ const DetailsTrack = () => {
   if (data === null) return <p> carregando... </p>
   return (
     <BaseTemplate>
-      <DivDetailsTrack>
-        <CardTrack
-          disk_number={data.disk_number}
-          title_short={data.title_short}
-          preview={data.preview}
-          link={data.link}
-        />
-      </DivDetailsTrack>
+      <Div>
+        <DivDetailsTrack>
+          <CardTrack
+            disk_number={data.disk_number}
+            title_short={data.title_short}
+            preview={data.preview}
+            link={data.link}
+          />
+        </DivDetailsTrack>
+      </Div>
     </BaseTemplate>
   )
 }
