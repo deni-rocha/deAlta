@@ -46,6 +46,7 @@ const DetailsArtist = () => {
           </section>
           {data.tracks.data.map((obj, index) => (
             <CardTrack
+              id={obj.id}
               index={++index}
               title_short={obj.title_short}
               preview={obj.preview}

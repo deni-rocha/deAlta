@@ -28,6 +28,7 @@ const DetailsTrack = () => {
       <Div>
         <DivDetailsTrack>
           <CardTrack
+            id={data.id}
             disk_number={data.disk_number}
             title_short={data.title_short}
             preview={data.preview}

@@ -33,6 +33,7 @@ const DetailsArtist = () => {
             {data?.map((res, index) => (
               <li key={index}>
                 <CardTrack
+                  id={res.id}
                   index={++index}
                   title_short={res.title_short}
                   preview={res.preview}
