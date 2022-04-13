@@ -10,11 +10,26 @@ const DivCardTrack = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  padding: 12px 12px 0px;
+  padding: 0px 12px 0px;
   margin-top: 24px;
+
+  .div-flex {
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: baseline;
+    display: flex;
+    &--child {
+      flex-grow: 1;
+    }
+  }
+  .card-track--star {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+  }
   .card-track--div {
     display: flex;
-    justify-content: space-around;
+    flex-grow: 1;
 
     &---title {
       margin-bottom: 12px;
