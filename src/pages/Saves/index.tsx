@@ -6,7 +6,7 @@ const Saves = () => {
   const [dataFavorites, setDataFavorites] = useState<ICardTrack[]>()
   const [modified, setModified] = useState(false)
   useEffect(() => {
-    const trackSaves: string = localStorage.tracks
+    const trackSaves: string = localStorage.tracks || JSON.stringify([])
 
     const dataParser: ICardTrack[] = JSON.parse(trackSaves)
     setDataFavorites(dataParser)
