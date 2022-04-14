@@ -15,7 +15,6 @@ const DetailsArtist = () => {
     const fetch = async () => {
       let res = await api.get(`artist/${id}`)
       const resData: IDetailsArtist[] = res.data
-      console.log('res da api', resData)
       setData(resData)
     }
 

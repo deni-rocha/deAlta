@@ -17,7 +17,6 @@ const DetailsArtist = () => {
       let res = await api.get(`album/${id}`)
       const resData: IDetailsAlbum = res.data
       setData(resData)
-      console.log(resData)
     }
 
     fetch()

@@ -16,7 +16,6 @@ const DetailsPlaylist = () => {
     const fetch = async () => {
       let res = await api.get(`playlist/${id}`)
       const resData: IDetailsPlaylist = res.data
-      console.log('res da api', resData)
       setData(resData)
     }
 

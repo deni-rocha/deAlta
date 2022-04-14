@@ -15,7 +15,6 @@ const DetailsTrack = () => {
     const fetch = async () => {
       let res = await api.get(`track/${id}`)
       const resData: IDetailsTrack = res.data
-      console.log('res da api', resData)
       setData(resData)
     }
 
