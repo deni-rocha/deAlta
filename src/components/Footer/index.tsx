@@ -1,13 +1,30 @@
+import GitHub from '../../assets/GitHub'
+import Linkedin from '../../assets/Linkedin'
 import { Div } from './styled'
-import ShowMore from '../../assets/ShowMore'
-import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <Div>
-      <Link to="/charts" className='link'>
-      <p>ver mais</p>
-      <ShowMore className='show-more' width={'50px'} height={'50px'}/>
-      </Link>
+      <div className="icon-git">
+        <a
+          href="https://github.com/deni-rocha/deAlta"
+          target="_blank"
+          className="link"
+          rel="noreferrer"
+        >
+          <GitHub /> <p> git-hub </p>
+        </a>
+      </div>
+
+      <div className="icon-lk">
+        <a
+          href="https://www.linkedin.com/in/denilson-rocha-aa0a39202/"
+          target="_blank"
+          className="link"
+          rel="noreferrer"
+        >
+          <Linkedin /> <p>linkedin</p>
+        </a>
+      </div>
     </Div>
   )
 }
