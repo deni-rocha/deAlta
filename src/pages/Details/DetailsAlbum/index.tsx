@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { DivLoad } from '../../../AppStyled'
 import CardTrack from '../../../components/CardTrack'
 import { api } from '../../../services/api'
 import BaseTemplate from '../../../templates/BaseTemplate'
@@ -7,6 +8,7 @@ import { IDetailsAlbum } from '../../../types/details/IDetailsAlbum'
 import getDateYear from '../../../utils/getYear'
 import { Div } from '../detailsStyled'
 import { DivDetailsAlbum } from './style'
+import Load from '../../../assets/gifs/Load'
 
 const DetailsArtist = () => {
   let { id } = useParams()
@@ -22,7 +24,12 @@ const DetailsArtist = () => {
     fetch()
   }, [id])
 
-  if (data === null) return <p> carregando... </p>
+  if (data === null)
+    return (
+      <DivLoad>
+        <Load className="load" />
+      </DivLoad>
+    )
   return (
     <BaseTemplate>
       <Div>

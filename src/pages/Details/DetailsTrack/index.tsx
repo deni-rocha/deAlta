@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { DivLoad } from '../../../AppStyled'
+import Load from '../../../assets/gifs/Load'
 import CardTrack from '../../../components/CardTrack'
 import { api } from '../../../services/api'
 import BaseTemplate from '../../../templates/BaseTemplate'
@@ -21,7 +23,12 @@ const DetailsTrack = () => {
     fetch()
   }, [id])
 
-  if (data === null) return <p> carregando... </p>
+  if (data === null)
+    return (
+      <DivLoad>
+        <Load className="load" />
+      </DivLoad>
+    )
   return (
     <BaseTemplate>
       <Div>
