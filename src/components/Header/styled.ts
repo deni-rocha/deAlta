@@ -43,9 +43,18 @@ const Ul = styled.ul`
   align-items: center;
 `
 const Li = styled.li`
+  display: flex;
+  align-items: center;
   a {
     color: ${({ theme }) => theme.text};
     text-decoration: none;
+  }
+
+  svg {
+    fill: ${({ theme }) => theme.background};
+  }
+  .active {
+    fill: ${({ theme }) => theme.text};
   }
 `
 
