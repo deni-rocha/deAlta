@@ -38,16 +38,16 @@ const DivDetailsPodcast = styled.div`
     font-weight: 500;
     padding: 4px 8px;
     min-height: 28px;
-
+    transition: 0.2s all ease-in-out;
+    &:hover {
+      transform: scale(1.2);
+    }
     a {
-      color: #a7dbc7;
+      color: white;
       text-decoration: none;
       align-self: flex-end;
       justify-self: flex-end;
       font-size: 14px;
-      &:hover {
-        color: black;
-      }
     }
   }
 `
