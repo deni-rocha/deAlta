@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import CardTrack, { ICardTrack } from '../../components/CardTrack'
+import Footer from '../../components/Footer'
 import { Div, SemFavoritos } from './styled'
 
 const Saves = () => {
@@ -22,6 +23,7 @@ const Saves = () => {
         <SemFavoritos>
           <h1>Você ainda não salvou nenhuma música</h1>
         </SemFavoritos>
+        <Footer />
       </Div>
     )
   return (
@@ -40,6 +42,7 @@ const Saves = () => {
           </li>
         ))}
       </ul>
+      <Footer />
     </Div>
   )
 }

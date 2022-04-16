@@ -5,6 +5,7 @@ const Div = styled.div`
   font-family: 'Roboto', sans-serif;
   color: ${({ theme }) => theme.titles};
   .ul-tracks {
+    min-height: calc(100vh - 182px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,7 +23,7 @@ const Div = styled.div`
 const SemFavoritos = styled.div`
   margin: 28px auto;
   width: 300px;
-  height: 300px;
+  min-height: calc(100vh - 204px);
   display: flex;
   flex-direction: column;
   justify-content: center;
