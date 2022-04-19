@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import Lamp from '../../assets/Lamp'
 import NavigationRight from '../../assets/NavigationRight'
+import urlPathContext from '../../context/urlPathContext'
 import { Button, Div, DivTittle, Li, Ul } from './styled'
 
 type IHeader = {
@@ -12,7 +13,7 @@ type IHeader = {
 }
 
 const Header = ({ theme }: IHeader) => {
-  const [pathName, setPathName] = useState(window.location.pathname)
+  const { pathName, setPathName } = useContext(urlPathContext)
 
   function pageUrl(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
     let path = e.currentTarget.pathname
